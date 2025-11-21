@@ -1,0 +1,33 @@
+<div class="sidenav" [ngClass]="isCollapsed ? 'sidenav-collapsed' : ''">
+
+    <!-- Close-Open-container -->
+    <div class="Close-Open-container">
+
+        <!-- Show bars-open only when collapsed -->
+        <div class="bars-open" *ngIf="isCollapsed" (click)="toggleSidebar()">
+            <fa-icon [icon]="faBars"></fa-icon>
+        </div>
+
+        <!-- Show text only when not collapsed -->
+        <div class="logo-text" *ngIf="!isCollapsed">
+            App
+        </div>
+
+        <!-- Show close-icon only when expanded -->
+        <div class="close-icon" *ngIf="!isCollapsed" (click)="toggleSidebar()">
+            <fa-icon [icon]="faTimes"></fa-icon>
+        </div>
+
+    </div>
+
+    <!-- Sidebar Menu -->
+    <ul class="sidebar-nav-nav">
+        <li class="sidenav-nav-item" *ngFor="let item of menuItems; let i=index ">
+            <a class="sidenav-nav-link" [routerLink]="item.routerLink" routerLinkActive="active " [routerLinkActiveOptions]="{ exact: true } ">
+                <fa-icon class="icon" [icon]="item.icon"></fa-icon>
+                <span *ngIf="!isCollapsed">{{ item.name }}</span>
+            </a>
+        </li>
+    </ul>
+
+</div>

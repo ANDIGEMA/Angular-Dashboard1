@@ -1,0 +1,14 @@
+/* Tittle - Active Leaves */
+.tittle{
+  font-size: 14px;
+  font-weight: bold;
+  color: orange;
+}
+.box3{
+  border-radius: 10px;
+}
+/* Border-color */
+.back{
+  border: 2px solid orange;
+}
+

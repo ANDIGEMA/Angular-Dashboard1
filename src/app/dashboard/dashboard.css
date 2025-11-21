@@ -1,0 +1,88 @@
+/* Card1 */
+.Card1, .Card1, .Card3, .Card4{
+  border-radius: 20px;
+}
+/* Recent leaves text color */
+.list-text{
+  color: blue;
+  font-weight: bold;
+  margin-left: 12px;
+  font-size: 18px;
+}
+/* Container for the buttons */
+.button-container{
+  border: 1px solid black;
+}
+
+/* Button on the right side */
+.button1{
+  border: 2px solid blue;
+  background-color: blue;
+  color: white;
+  font-weight: bold;
+  width:100%;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.button1:hover{
+  border: 2px solid white;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/*  */
+.button2{
+  border: 2px solid green;
+  width: 100%;
+  border-radius: 8px;
+   background-color: green;
+  color: white;
+  font-weight: green;
+  font-weight: bold;
+}
+.button2:hover{
+  border: 2px solid white;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/*  */
+.button3{
+  border: 2px solid skyblue;
+  width: 100%;
+  border-radius: 8px;
+   background-color: skyblue;
+  color: white;
+  font-weight: bold;
+}
+.button3:hover{
+  border: 2px solid white;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/*  */
+.button4{
+  border: 2px solid orange;
+  width: 100%;
+  border-radius: 8px;
+   background-color: orange;
+  color: white;
+  font-weight: bold;
+}
+.button4:hover{
+  border: 2px solid white;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Quick Action Text */
+.Quick{
+  color: blue;
+  font-weight: bold;
+}
+

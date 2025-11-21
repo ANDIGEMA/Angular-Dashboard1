@@ -1,0 +1,97 @@
+/* When collapsed, center icons and hide text */
+.sidenav{
+  background-color: blue;
+  color: white;
+  width: 250px;
+  height: 100vh;
+  padding-top: 10px;
+  transition: width 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+/* COLLAPSED sidebar */
+.sidenav-collapsed {
+  width: 70px;      /* Collapsed width */
+}
+
+.Close-Open-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  width: 100%;
+}
+
+
+.bars-open {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.close-icon {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+
+.logo-text {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* sideBar items container */
+.sidebar-nav-nav{
+    padding-bottom: 10px;
+    padding-left: 0;
+    margin: 0;
+}
+
+/* Sidebar list container */
+.sidebar-nav {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+/* sidebar li tag */
+.sidenav-nav-item{
+  list-style-type: none;
+  width: 100%;
+}
+
+
+.sidenav-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 15px;
+  text-decoration: none;
+  color: white;
+  transition: all 0.2s ease-in-out;
+  border-radius: 6px;
+}
+/* When collapsed, center the icon */
+.sidenav-collapsed .sidenav-nav-link {
+  justify-content: center;
+}
+
+
+/* Hover effect */
+.sidenav-nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Active route */
+.sidenav-nav-link.active {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Icon */
+.icon {
+  font-size: 20px;
+}
+
+/* Text */
+.item-text {
+  white-space: nowrap;
+}

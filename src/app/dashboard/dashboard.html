@@ -1,0 +1,88 @@
+<div class="container-fluid">
+    <h5 class="fw-semi-bold">Dashboard</h5>
+    <!-- TopCard  -->
+    <div class="row g-2">
+        <div class="col-sm-3 col-md-3 col-lg-3">
+            <app-top-card-dashboard></app-top-card-dashboard>
+        </div>
+
+
+        <div class="col-sm-3 col-md-3 col-lg-3">
+            <app-top-card2-dashboard></app-top-card2-dashboard>
+        </div>
+
+
+        <div class="col-sm-3 col-md-3 col-lg-3">
+            <app-top-card3-dashboard></app-top-card3-dashboard>
+        </div>
+
+
+
+
+        <div class="col-sm-3 col-md-3 col-lg-3">
+            <app-top-card4-dashboard></app-top-card4-dashboard>
+        </div>
+    </div>
+
+    <!--  Recent Leave List Text -->
+    <div class="mt-5">
+        <h6 class="list-text">Recent Leave Applications</h6>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Left -->
+            <div class="col-md-8">
+                <!-- Tables -->
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col fs-5">EMPLOYEE</th>
+                            <th scope="col fs-5">LEAVE TYPE</th>
+                            <th scope="col fs-5">DURATION</th>
+                            <th scope="col fs-5">STATUS</th>
+                            <th scope="col fs-5">ACTION</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td colspan="1">Larry the Bird</td>
+                            <td>@twitter</td>
+                        </tr>
+
+
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Right -->
+            <div class="col-md-4">
+                <div class="container-fluid border border-dark py-3 rounded">
+                    <div class="py-3 fw-bold Quick">Quick Actions</div>
+                    <div class="p-3 d-flex flex-column align-items-center rounded button-container">
+                        <div class="button1 px-5 py-2 text-center" routerLink="/AddNewEmployee">Add New Employee</div>
+                        <div class="button2 px-5 py-2 mt-3 text-center" routerLink="/exportReport">New Leaves Request</div>
+                        <div class="button3 px-5 py-2 mt-3 text-center" routerLink="/newLeaves">Export Reports</div>
+                        <div class="button4 px-5 py-2 mt-3 text-center" routerLink="/newLeaves">System Settings</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</div>

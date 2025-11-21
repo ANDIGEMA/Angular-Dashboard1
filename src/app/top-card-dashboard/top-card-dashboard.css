@@ -1,0 +1,19 @@
+/* .container{
+  border: 2px solid green;
+  display: flex;
+  padding: 2px;
+
+} */
+.tittle{
+  font-size: 14px;
+  font-weight: bold;
+  color: blue;
+}
+/* Border-color */
+.back{
+  border: 2px solid brown;
+}
+/* Border-color */
+.back{
+  border: 2px solid blue;
+}

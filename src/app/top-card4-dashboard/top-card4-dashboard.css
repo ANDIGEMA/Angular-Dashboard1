@@ -1,0 +1,14 @@
+/* Card2 container */
+.box2{
+  border-radius: 10px;;
+}
+/* Tittle - Active Leaves */
+.tittle{
+  font-size: 14px;
+  font-weight: bold;
+  color: brown;
+}
+/* Border-color */
+.back{
+  border: 2px solid brown;
+}

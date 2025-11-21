@@ -1,0 +1,26 @@
+/* Container for both left-sidebar and Main */
+.layout-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.main-container {
+  flex-grow: 1;                /* Take remaining width */
+  transition: margin-left 0.3s ease;
+  padding: 20px;
+  margin-left: 0;
+}
+
+/* When the sidebar is collapsed to 70px: */
+.main-collapsed {
+  margin-left: 0;  /* No need to shift */
+}
+
+/* If you want the main content to shift slightly when expanded (optional): */
+.main-container {
+  margin-left: 0;
+}
+:not(.main-collapsed).main-container {
+  margin-left: 0;
+}
