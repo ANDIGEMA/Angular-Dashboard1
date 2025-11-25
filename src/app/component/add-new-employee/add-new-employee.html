@@ -4,107 +4,42 @@
     <div class="container-fluid">
         <div class="row">
 
-            <!-- Left Section -->
-            <div class="col-sm-6 col-md-6 col-lg-6">
+            <!-- LEFT SECTION -->
+            <div class="col-sm-6">
+
 
                 <!-- Employee Name -->
                 <div class="form-group mb-3">
-                    <label for="name">Employee Name</label>
-                    <input type="text" id="name" class="form-control" name="name" required minlength="3" [(ngModel)]="employee.name" #name="ngModel" />
-                    <div class="text-danger" *ngIf="name.invalid && name.touched">
-                        <small *ngIf="name.errors?.['required']">Name is required.</small>
-                        <small *ngIf="name.errors?.['minlength']">Minimum 3 characters.</small>
-                    </div>
+                    <label for="EmpName">Employee Name</label>
+                    <input id="EmpName" type="text" class="form-control" name="EmpName" required minlength="3" [(ngModel)]="employee.EmpName" #EmpName="ngModel" placeholder="Enter employee name">
+                </div>
+
+
+                <!-- Employee ID -->
+                <div class="form-group mb-3">
+                    <label for="EmpId">Employee ID</label>
+                    <input id="EmpId" type="text" class="form-control" name="EmpId" required [(ngModel)]="employee.EmpId" #EmpId="ngModel" placeholder="Enter employee ID">
                 </div>
 
                 <!-- Email -->
                 <div class="form-group mb-3">
-                    <label for="email">Email ID</label>
-                    <input type="email" id="email" class="form-control" name="email" required email [(ngModel)]="employee.email" #email="ngModel" />
-                    <div class="text-danger" *ngIf="email.invalid && email.touched">
-                        <small *ngIf="email.errors?.['required']">Email is required.</small>
-                        <small *ngIf="email.errors?.['email']">Enter a valid email.</small>
-                    </div>
+                    <label for="EmpEmailId">Email ID</label>
+                    <input id="EmpEmailId" type="email" class="form-control" name="EmpEmailId" required email [(ngModel)]="employee.EmpEmailId" #EmpEmailId="ngModel" placeholder="Enter email address">
                 </div>
 
-                <!-- Password -->
+                <!-- Designation -->
                 <div class="form-group mb-3">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" class="form-control" name="password" required minlength="6" [(ngModel)]="employee.password" #password="ngModel" />
-                    <div class="text-danger" *ngIf="password.invalid && password.touched">
-                        <small *ngIf="password.errors?.['required']">Password is required.</small>
-                        <small *ngIf="password.errors?.['minlength']">Minimum 6 characters.</small>
-                    </div>
+                    <label for="EmpDesignation">Designation</label>
+                    <input id="EmpDesignation" type="text" class="form-control" name="EmpDesignation" required [(ngModel)]="employee.EmpDesignation" #EmpDesignation="ngModel" placeholder="Enter designation">
                 </div>
+
+            </div>
+
+            <!-- RIGHT SECTION -->
+            <div class="col-sm-6">
 
                 <!-- Role -->
                 <div class="form-group mb-3">
-                    <label for="role">Role</label>
-                    <input type="text" id="role" class="form-control" name="role" required [(ngModel)]="employee.role" #role="ngModel" />
-                    <div class="text-danger" *ngIf="role.invalid && role.touched">
-                        <small>Role is required.</small>
-                    </div>
+                    <label for="EmpRole">Role</label>
+                    <input id="EmpRole" type="text" class="form-control" name="EmpRole" required [(ngModel)]="employee.EmpRole" #Emprole="ngModel" placeholder="Enter role">
                 </div>
-
-            </div>
-
-            <!-- Right Section -->
-            <div class="col-sm-6 col-md-6 col-lg-6">
-
-                <!-- Contact Number -->
-                <div class="form-group mb-3">
-                    <label for="contact">Contact Number</label>
-                    <input type="tel" id="contact" class="form-control" name="contact" required pattern="^[0-9]{9,15}$" [(ngModel)]="employee.contact" #contact="ngModel" />
-                    <div class="text-danger" *ngIf="contact.invalid && contact.touched">
-                        <small *ngIf="contact.errors?.['required']">Contact number is required.</small>
-                        <small *ngIf="contact.errors?.['pattern']">Enter a valid number (9–15 digits).</small>
-                    </div>
-                </div>
-
-                <!-- Department -->
-                <div class="form-group mb-3">
-                    <label for="department">Department</label>
-                    <select id="department" class="form-control" name="department" required [(ngModel)]="employee.department" #department="ngModel">
-            <option value="">Select Department</option>
-            <option>Genie Informatique</option>
-            <option>Genie Civil</option>
-            <option>Genie Mechanics</option>
-            <option>Genie Mecatronic</option>
-            <option>Genie Maritime</option>
-            <option>Genie Procedes</option>
-          </select>
-                    <div class="text-danger" *ngIf="department.invalid && department.touched">
-                        <small>Department is required.</small>
-                    </div>
-                </div>
-
-                <!-- Gender -->
-                <div class="form-group mb-3">
-                    <label for="gender">Gender</label>
-                    <select id="gender" class="form-control" name="gender" required [(ngModel)]="employee.gender" #gender="ngModel">
-            <option value="">Select Gender</option>
-            <option>Male</option>
-            <option>Female</option>
-          </select>
-                    <div class="text-danger" *ngIf="gender.invalid && gender.touched">
-                        <small>Gender is required.</small>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </div>
-
-    <!-- Buttons -->
-    <div class="add-button d-flex flex-row justify-content-end mt-3">
-        <button type="submit" class="btn btn-primary" [disabled]="employeeForm.invalid">
-      Submit
-    </button>
-
-        <button type="button" class="btn btn-dark mx-3" routerLink="/dashboard">
-      Back
-    </button>
-    </div>
-
-</form>

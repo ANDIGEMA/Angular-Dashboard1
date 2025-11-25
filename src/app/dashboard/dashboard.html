@@ -36,30 +36,54 @@
                 <table class="table table-bordered">
                     <thead>
                         <tr>
-                            <th scope="col fs-5">EMPLOYEE</th>
-                            <th scope="col fs-5">LEAVE TYPE</th>
-                            <th scope="col fs-5">DURATION</th>
-                            <th scope="col fs-5">STATUS</th>
-                            <th scope="col fs-5">ACTION</th>
+                            <th scope="col fs-5">EmpName</th>
+                            <th scope="col fs-5">EmpId</th>
+                            <th scope="col fs-5">EmpCode</th>
+                            <th scope="col fs-5">EmpDesignation</th>
+                            <th scope="col fs-5">Role</th>
+                            <th scope="col fs-5">Mobile</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
+                            <td>MangeshKr</td>
+                            <td>1457</td>
+                            <td>CT-421</td>
+                            <td>mtayade91@gmail.com</td>
+                            <td>UX Eng</td>
+                            <td>Manager</td>
+                            <td>7030707022</td>
                         </tr>
                         <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
+                            <td>MangeshKr</td>
+                            <td>1457</td>
+                            <td>CT-421</td>
+                            <td>mtayade91@gmail.com</td>
+                            <td>UX Eng</td>
+                            <td>Manager</td>
+                            <td>7030707022</td>
                         </tr>
                         <tr>
-                            <th scope="row">3</th>
-                            <td colspan="1">Larry the Bird</td>
-                            <td>@twitter</td>
+                            <td>MangeshKr</td>
+                            <td>1457</td>
+                            <td>CT-421</td>
+                            <td>mtayade91@gmail.com</td>
+                            <td>UX Eng</td>
+                            <td>Manager</td>
+                            <td>7030707022</td>
+                        </tr>
+                        <tr *ngFor="let emp of employees">
+                            <td>{{ emp.EmpName }}</td>
+                            <td>{{ emp.EmpId }}</td>
+                            <td>{{ emp.EmpCode }}</td>
+                            <td>{{ emp.EmpDesignation }}</td>
+                            <td>{{ emp.EmpRole }}</td>
+                            <td>{{ emp.EmpMobile }}</td>
+
+                            <td>
+                                <button class="btn btn-sm btn-warning mx-2" (click)="editEmployee(emp)">Edit</button>
+                                <button class="btn btn-sm btn-danger" (click)="deleteEmployee(emp.EmpId)">Delete</button>
+                            </td>
                         </tr>
 
 
@@ -72,7 +96,7 @@
                 <div class="container-fluid border border-dark py-3 rounded">
                     <div class="py-3 fw-bold Quick">Quick Actions</div>
                     <div class="p-3 d-flex flex-column align-items-center rounded button-container">
-                        <div class="button1 px-5 py-2 text-center" routerLink="/AddNewEmployee">Add New Employee</div>
+                        <div class="button1 px-5 py-2 text-center" (click)="addNewEmployee()">Add New Employee</div>
                         <div class="button2 px-5 py-2 mt-3 text-center" routerLink="/exportReport">New Leaves Request</div>
                         <div class="button3 px-5 py-2 mt-3 text-center" routerLink="/newLeaves">Export Reports</div>
                         <div class="button4 px-5 py-2 mt-3 text-center" routerLink="/newLeaves">System Settings</div>
